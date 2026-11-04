@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиница «Центральная» — Комфорт в каждой детали</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🏨</span> Центральная
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#room">Наши номера</a></li>
+                <li><a href="#lux">Люкс</a></li>
+                <li><a href="#amenities">Удобства</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Добро пожаловать</span>
+            <h1 class="hero-title">
+                Ваш идеальный отдых<br>
+                начинается <span class="highlight">здесь</span>
+            </h1>
+            <p class="hero-subtitle">
+                Гостиница «Центральная» — это уютные номера, внимание к деталям и домашняя атмосфера. 
+                Всё, чтобы вы чувствовали себя как дома.
+            </p>
+            <div class="hero-buttons">
+                <a href="#room" class="btn btn-primary">Посмотреть номера</a>
+                <a href="tel:+79278186080" class="btn btn-outline">📞 +7 (927) 818-60-80</a>
+            </div>
+        </div>
+        <!-- Выплывающая картинка в Hero -->
+        <div class="hero-image reveal">
+            <img src="photo_1_2026-11-01_11-19-26.jpg" alt="Номер гостиницы Центральная">
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <div class="about-text reveal">
+                <span class="section-tag">О гостинице</span>
+                <h2>Комфорт в каждой <span class="highlight">детали</span></h2>
+                <p>Мы создали пространство, где царит атмосфера тепла и уюта. Каждый номер оформлен с любовью, чтобы вы могли отдохнуть после долгого дня.</p>
+                <p>Наши гости отмечают чистоту, внимание персонала и продуманный до мелочей интерьер.</p>
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-num">6</span>
+                        <span class="stat-label">уютных номеров</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">4.4</span>
+                        <span class="stat-label">рейтинг гостей</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image reveal">
+                <img src="photo_8_2026-11-01_11-19-26.jpg" alt="Интерьер номера">
+            </div>
+        </div>
+    </section>
+
+    <!-- НОМЕР СТАНДАРТ -->
+    <section id="room" class="section bg-light">
+        <div class="section-header reveal">
+            <span class="section-tag">Наше предложение</span>
+            <h2>Уютные <span class="highlight">номера</span> для вашего отдыха</h2>
+        </div>
+        
+        <div class="single-room-layout">
+            <!-- Галерея номеров -->
+            <div class="room-gallery reveal">
+                <div class="main-image-wrapper">
+                    <!-- Исправлен путь на существующее фото -->
+                    <img src="photo_3_2026-11-01_11-19-26.jpg" alt="Главное фото номера" id="mainRoomImage" class="main-room-image">
+                </div>
+                <div class="thumbnail-grid">
+                    <img src="photo_3_2026-11-01_11-19-26.jpg" alt="Фото 2" class="thumbnail" onclick="changeImage(this)">
+                    <img src="photo_2_2026-11-04_10-43-10.jpg" alt="Фото 3" class="thumbnail" onclick="changeImage(this)">
+                    <img src="photo_5_2026-11-01_11-19-26.jpg" alt="Фото 4" class="thumbnail" onclick="changeImage(this)">
+                    <img src="photo_8_2026-11-01_11-19-26.jpg" alt="Фото 5" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <!-- Описание и цена -->
+            <div class="room-details reveal" style="transition-delay: 0.1s;">
+                <h3>Стандарт с удобствами</h3>
+                <div class="price-tag">2 000 ₽ <span>/ ночь</span></div>
+                <p class="room-desc">
+                    Просторный и светлый номер, выполненный в тёплых бежевых тонах. 
+                    В номере есть всё необходимое для комфортного проживания: 
+                    удобные кровати, рабочая зона, телевизор.
+                    Общая кухня и ванная комната с душевой и туалетом
+                </p>
+                
+                <ul class="room-features-list">
+                    <li>📶 Бесплатный Wi-Fi</li>
+                    <li>📺 Телевизор</li>
+                    <li>🚿 Ванная (душевая кабина)</li>
+                    <li>☕ Чайник и посуда</li>
+                    <li>👔 Шкаф для одежды</li>
+                    <li>🛏️ Удобные кровати</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОМЕР ЛЮКС -->
+    <section id="lux" class="section">
+        <div class="single-room-layout">
+            <!-- Галерея Люкса -->
+            <div class="room-gallery reveal">
+                <div class="main-image-wrapper">
+                    <!-- Главное фото Люкса (используем ваши фото с датой 10-43-10) -->
+                    <img src="photo_2_2026-11-01_11-19-26.jpg" alt="Главное фото Люкса" id="mainLuxImage" class="main-room-image">
+                </div>
+                <div class="thumbnail-grid">
+                    <!-- Миниатюры Люкса -->
+                    <img src="photo_2_2026-11-01_11-19-26.jpg" alt="Фото 1" class="thumbnail active" onclick="changeImage(this)">
+                    <img src="photo_1_2026-11-01_11-19-26.jpg" alt="Фото 2" class="thumbnail" onclick="changeImage(this)">
+                    <img src="photo_6_2026-11-01_11-19-26.jpg" alt="Фото 3" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <!-- Описание Люкса -->
+            <div class="room-details reveal" style="transition-delay: 0.1s;">
+                <h3>Улучшенный стандарт</h3>
+                <div class="price-tag">3 000 ₽ <span>/ ночь</span></div>
+                <p class="room-desc">
+                    Номер повышенной комфортности. Просторная комната с большой двуспальной кроватью, 
+                    отдельной зоной отдыха и собственной ванной комнатой. Идеальный выбор для тех, 
+                    кто ценит уединение и максимальный комфорт.
+                </p>
+                
+                <ul class="room-features-list">
+                    <li>📶 Бесплатный Wi-Fi</li>
+                    <li>📺 Телевизор</li>
+                    <li>🚿 Собственная ванная комната</li>
+                    <li>☕ Чайник и посуда</li>
+                    <li>👔 Большой шкаф</li>
+                    <li>🛏️ Двуспальная кровать</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Удобства -->
+    <section id="amenities" class="section bg-light">
+        <div class="section-header reveal">
+            <span class="section-tag">Для вашего комфорта</span>
+            <h2>Всё, что нужно для <span class="highlight">отдыха</span></h2>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-card reveal">
+                <div class="amenity-icon">📶</div>
+                <h3>Бесплатный Wi-Fi</h3>
+                <p>Быстрый интернет во всех номерах и на территории.</p>
+            </div>
+            <div class="amenity-card reveal" style="transition-delay: 0.2s;">
+                <div class="amenity-icon">🚗</div>
+                <h3>Парковка</h3>
+                <p>Бесплатная охраняемая парковка для гостей.</p>
+            </div>
+            <div class="amenity-card reveal" style="transition-delay: 0.3s;">
+                <div class="amenity-icon">🧺</div>
+                <h3>Прачечная</h3>
+                <p>Стирка и глажка одежды по запросу.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">🏨</span> Гостиница «Центральная»
+                <p>Комфорт в каждой детали</p>
+            </div>
+            <div class="footer-contacts">
+                <p>📍 Р.П. Кузоватово, ул. Октябрьская, д. 9</p>
+                <p>📞 +7 (927) 818-60-80</p>
+            </div>
+            <p class="footer-copy">© 2026 Гостиница «Центральная». Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
